@@ -1,6 +1,6 @@
-import UserLeaderboardCard from "./UserLeaderboardCard";
+import GroupLeaderboardCard from "./GroupLeaderboardCard";
 
-interface User {
+interface Group {
     name: string;
     image: string;
     points: number;
@@ -8,18 +8,18 @@ interface User {
     previous_accuracy_percentage: number;
 }
 
-interface UserLeaderboardProps {
-    data: User[];
+interface GroupLeaderboardProps {
+    data: Group[];
 }
-const UserLeaderboard : React.FC<UserLeaderboardProps>= ({data}) => {
+const GroupLeaderboard : React.FC<GroupLeaderboardProps>= ({data}) => {
 console.log(data);
 
     return (
         <div className="py-6 pl-6 bg-white drop-shadow rounded-3xl ">
-            <h1>User Leaderboard</h1>
+            <h1>Groups Leaderboard</h1>
             {
                 data.map((item,idx)=>
-                    <UserLeaderboardCard
+                    <GroupLeaderboardCard
                     key={idx}
                     item={item}
                     idx={idx}
@@ -30,4 +30,4 @@ console.log(data);
     );
 };
 
-export default UserLeaderboard;
+export default GroupLeaderboard;

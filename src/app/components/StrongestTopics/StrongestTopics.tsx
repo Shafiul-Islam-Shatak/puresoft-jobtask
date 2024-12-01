@@ -1,7 +1,12 @@
 import StrongestTopicsCard from "./StrongestTopicsCard";
 
+interface StrongestData {
+    name: string,
+    image: string
+    correct_percentage: number
+}
 interface StrongestTopicsProps {
-    data : Array
+    data : StrongestData[]
 }
 const StrongestTopics : React.FC<StrongestTopicsProps>= ({data}) => {
 console.log(data);

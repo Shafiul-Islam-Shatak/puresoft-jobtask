@@ -44,7 +44,7 @@ const UserLeaderboardCard: React.FC<UserLeaderboardCardProps> = ({ item , idx}) 
 
                 </div>
             </div>
-            <div className="mr-5 flex items-center ">
+            <div className="mr-5 flex items-center justify-center ">
                 <h2>{idx+1}</h2>
                 {
                     userImprove ? 

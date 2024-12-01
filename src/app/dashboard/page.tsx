@@ -13,6 +13,7 @@ import Activity from '../components/Metrics/Activity';
 import WeakestTopics from '../components/WeakestTopics/WeakestTopics';
 import StrongestTopics from '../components/StrongestTopics/StrongestTopics';
 import UserLeaderboard from '../components/UserLeaderboard/UserLeaderboard';
+import GroupLeaderboard from '../components/GroupsLeaderboard/GroupLeaderboard';
 
 const DashboardPage = () => {
 
@@ -56,6 +57,7 @@ const DashboardPage = () => {
                     <div><WeakestTopics data={data?.topics.weakest}/></div>
                     <div><StrongestTopics data={data?.topics.strongest}/></div>
                     <div><UserLeaderboard data={data?.user_leaderboard}/></div>
+                    <div><GroupLeaderboard data={data?.groups_leaderboard}/></div>
                 </div>
 
              

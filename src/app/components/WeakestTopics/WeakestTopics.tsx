@@ -1,19 +1,26 @@
 import WeakestTopicsCard from "./WeakestTopicsCard";
 
-interface WeakestTopicsProps {
-    data : Array
+interface WeakestData {
+    name: string,
+    image: string
+    correct_percentage: number
 }
-const WeakestTopics : React.FC<WeakestTopicsProps>= ({data}) => {
-console.log(data);
+
+interface WeakestTopicsProps {
+    data: WeakestData[]
+}
+
+const WeakestTopics: React.FC<WeakestTopicsProps> = ({ data }) => {
+    console.log(data);
 
     return (
         <div className="py-6 pl-6 bg-white drop-shadow rounded-3xl ">
             <h1>Weakest Topics</h1>
             {
-                data.map((item,idx)=>
+                data.map((item, idx) =>
                     <WeakestTopicsCard
-                    key={idx}
-                    item={item}
+                        key={idx}
+                        item={item}
                     />
                 )
             }
