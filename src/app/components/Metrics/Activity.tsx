@@ -16,13 +16,13 @@ const Activity: React.FC<ActivityProps> = ({ data }) => {
   console.log(data);
 
   return (
-    <div className={`bg-white px-5 rounded-3xl py-4 max-h-[322px] mt-5 drop-shadow`}>
+    <div className={`bg-white px-5 rounded-3xl py-4 max-h-[322px] mt-5 drop-shadow `}>
         <div className='flex items-center justify-between'>
             <h1>Activity</h1>
             <div className='flex items-center'><h1>Monthly</h1><IoIosArrowDown className='ml-2'/></div>
         </div>
-        <hr />
-      <ResponsiveContainer width="100%" height={280} >
+        <hr className='mt-2'/>
+      <ResponsiveContainer width="100%" height={250} className={`mt-5`} >
         <BarChart
           data={data}
           margin={{

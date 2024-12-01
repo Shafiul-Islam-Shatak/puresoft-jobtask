@@ -17,9 +17,9 @@ const Metrics : React.FC<MetricsProps> = ({ data }) => {
     }
 
     return (
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3   rounded-3xl ">
             {/* 1st block */}
-            <div className="max-w-[170px] h-[150px] drop-shadow bg-white rounded-2xl pl-4 pt-4 mt-5">
+            <div className="max-w-[170px]  drop-shadow bg-white rounded-2xl pl-4 pt-4 mt-5">
                 <h1 className="text-[#000000B3] text-sm">{'Active Users'}</h1>
                 <h1 className="font-semibold text-2xl mt-6">{data?.active_users.current}<span className="text-[#00000080] text-xs">/{data?.active_users.total}</span></h1>
             </div>

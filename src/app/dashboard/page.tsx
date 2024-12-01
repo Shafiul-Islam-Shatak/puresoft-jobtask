@@ -10,6 +10,9 @@ import axios from 'axios';
 import { GridLoader } from 'react-spinners';
 import Metrics from '../components/Metrics/Metrics';
 import Activity from '../components/Metrics/Activity';
+import WeakestTopics from '../components/WeakestTopics/WeakestTopics';
+import StrongestTopics from '../components/StrongestTopics/StrongestTopics';
+import UserLeaderboard from '../components/UserLeaderboard/UserLeaderboard';
 
 const DashboardPage = () => {
 
@@ -46,25 +49,16 @@ const DashboardPage = () => {
                     <TopicFilter />
                 </div>
 
-                {/* activity section */}
-                <div className='grid grid-cols-2'>
+                <div className='grid grid-cols-2 gap-3'>
                     {/* metrics */}
                     <div><Metrics data={data?.metrics}/></div>
                     <div><Activity data ={data?.activity.monthly}/></div>
+                    <div><WeakestTopics data={data?.topics.weakest}/></div>
+                    <div><StrongestTopics data={data?.topics.strongest}/></div>
+                    <div><UserLeaderboard data={data?.user_leaderboard}/></div>
                 </div>
 
-                {/* Topics section */}
-                <div className='grid grid-cols-2'>
-                    <div></div>
-                    <div></div>
-                </div>
-
-                {/* Leaderboard section */}
-                <div className='grid grid-cols-2'>
-                    <div></div>
-                    <div></div>
-                </div>
-
+             
 
             </div>
         </div>
