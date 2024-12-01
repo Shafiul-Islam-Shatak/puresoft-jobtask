@@ -16,7 +16,7 @@ const TopicFilter = () => {
         <div>
             <div className=" max-w-[365px] bg-white rounded-3xl mt-7">
                 <div onClick={selectOpen} className="flex items-center justify-between py-2 px-4 h-12">
-                    <h1>Timeframe : {selectedTimeframe}</h1>
+                    <h1>Topic : All</h1>
                     <div  >
                         <GoTriangleDown className={`${arrowUP ? 'hidden' : ''}`} />
                         <GoTriangleUp className={`${arrowUP ? '' : 'hidden'}`} />

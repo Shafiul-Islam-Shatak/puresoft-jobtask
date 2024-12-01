@@ -1,28 +1,74 @@
+'use client'
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar'
 import { IoMdDownload } from "react-icons/io";
 import TimeframeFilter from '../components/Filter/TimeframeFilter';
 import PeopleFilter from '../components/Filter/PeopleFilter';
 import TopicFilter from '../components/Filter/TopicFilter';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import { GridLoader } from 'react-spinners';
+import Metrics from '../components/Metrics/Metrics';
+import Activity from '../components/Metrics/Activity';
 
-const page = () => {
+const DashboardPage = () => {
+
+    const { data, isLoading } = useQuery({
+        queryKey: ['data'],
+        queryFn: async () => {
+            const res = await axios.get('/task-data.json')
+            return res.data
+        }
+    })
+
+    if (isLoading) {
+        return <div className='w-screen h-screen mx-auto'> <GridLoader color="#918484" />
+        </div>
+    }
+
     return (
-        <div className='flex'>
+        <div className='flex max-w-[1440px] mx-auto'>
+            {/* left side bar */}
             <Navbar></Navbar>
+
+            {/* header section */}
             <div className='flex-1 px-8 mt-4 '>
                 <div className='flex justify-between py-2 items-center '>
                     <h1 className='text-2xl font-bold'>Reports</h1>
                     <h1 className='flex items-center'><IoMdDownload />Download</h1>
                 </div>
                 <hr className='mt-9' />
+
+                {/* data filter section */}
                 <div className='grid grid-cols-3'>
                     <TimeframeFilter />
-                    <PeopleFilter/>
-                    <TopicFilter/>
+                    <PeopleFilter />
+                    <TopicFilter />
                 </div>
+
+                {/* activity section */}
+                <div className='grid grid-cols-2'>
+                    {/* metrics */}
+                    <div><Metrics data={data?.metrics}/></div>
+                    <div><Activity/></div>
+                </div>
+
+                {/* Topics section */}
+                <div className='grid grid-cols-2'>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                {/* Leaderboard section */}
+                <div className='grid grid-cols-2'>
+                    <div></div>
+                    <div></div>
+                </div>
+
+
             </div>
         </div>
     );
 };
 
-export default page;
+export default DashboardPage;

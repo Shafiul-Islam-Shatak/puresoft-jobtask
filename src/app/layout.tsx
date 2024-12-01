@@ -1,6 +1,8 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter} from 'next/font/google';
+import { Inter } from 'next/font/google';
+import QueryProvider from "./components/QueryProvider/QueryProvider";
 
 const inter = Inter({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -18,8 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className} antialiased bg-[#F9F9F9]`}
-      >
-        {children}
+      ><QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );
