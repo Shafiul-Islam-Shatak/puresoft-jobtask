@@ -50,7 +50,7 @@ const DashboardPage = () => {
                 <div className='grid grid-cols-2'>
                     {/* metrics */}
                     <div><Metrics data={data?.metrics}/></div>
-                    <div><Activity/></div>
+                    <div><Activity data ={data?.activity.monthly}/></div>
                 </div>
 
                 {/* Topics section */}
