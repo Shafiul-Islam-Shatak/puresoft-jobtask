@@ -11,7 +11,6 @@ interface WeakestTopicsProps {
 }
 
 const WeakestTopics: React.FC<WeakestTopicsProps> = ({ data }) => {
-    console.log(data);
 
     return (
         <div className="py-6 pl-6 bg-white drop-shadow rounded-3xl ">

@@ -23,14 +23,14 @@ const UserLeaderboardCard: React.FC<UserLeaderboardCardProps> = ({ item , idx}) 
 
     return (
         <div className="flex justify-between items-center">
-            <div className="flex items-center mb-8 mt-7 ">
+            <div className="flex items-center my-5 ">
                 <div>
                     <Image
                         className="rounded-full"
                         alt={item.name}
                         src={item.image}
-                        height={50}
-                        width={50}
+                        height={64}
+                        width={64}
                     >
                     </Image>
                 </div>

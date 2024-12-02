@@ -15,7 +15,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     return (
-        <div className="relative">
+        <div className="relative ">
             {/* Toggle Button */}
             <button
                 className="text-3xl ml-3 absolute lg:hidden"
@@ -26,7 +26,7 @@ const Navbar = () => {
 
             <div
                 className={`w-[246px] ${isOpen ? "flex absolute z-20" : "hidden"
-                    } lg:flex flex-col items-center py-10 rounded-3xl bg-white justify-between`}
+                    } lg:flex flex-col items-center py-10 rounded-3xl bg-white justify-between h-screen`}
             >
                 <div>
                     <Image

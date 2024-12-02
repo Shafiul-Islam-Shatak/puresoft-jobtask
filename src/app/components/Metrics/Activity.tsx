@@ -13,7 +13,6 @@ interface ActivityProps {
 }
 
 const Activity: React.FC<ActivityProps> = ({ data }) => {
-  console.log(data);
 
   return (
     <div className={`bg-white px-5 rounded-3xl py-4 max-h-[322px] mt-5 drop-shadow `}>

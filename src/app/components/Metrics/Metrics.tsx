@@ -4,7 +4,6 @@ interface MetricsProps {
   data: any;
 }
 const Metrics : React.FC<MetricsProps> = ({ data }) => {
-    console.log(data);
 
     const answeredQuestions = new Intl.NumberFormat('en-US').format(data?.questions_answered)
 
@@ -17,7 +16,7 @@ const Metrics : React.FC<MetricsProps> = ({ data }) => {
     }
 
     return (
-        <div className="grid grid-cols-3   rounded-3xl ">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 lg:gap-5 rounded-3xl ">
             {/* 1st block */}
             <div className="max-w-[170px]  drop-shadow bg-white rounded-2xl pl-4 pt-4 mt-5">
                 <h1 className="text-[#000000B3] text-sm">{'Active Users'}</h1>
@@ -35,7 +34,7 @@ const Metrics : React.FC<MetricsProps> = ({ data }) => {
             </div>
             {/* 4th block */}
             <div className="max-w-[170px] h-[150px] drop-shadow bg-white rounded-2xl pl-4 pt-4 mt-5">
-                <h1 className="text-[#000000B3] flex items-center text-sm">{'Starting Knowledge'} <CiCircleInfo className='ml-1'/></h1>
+                <h1 className="text-[#000000B3] flex items-center text-sm">{'Starting Knowledge'} <CiCircleInfo className='ml-1 hidden lg:block'/></h1>
                 <h1 className="font-semibold text-2xl mt-6">{data?.starting_knowledge_percentage}%</h1>
             </div>
             {/* 5th block */}

@@ -14,7 +14,7 @@ const TimeframeFilter = () => {
 
     return (
         <div>
-            <div className=" max-w-[365px] bg-white rounded-3xl mt-7">
+            <div className=" max-w-[365px] bg-white rounded-3xl mt-7 relative">
                 <div onClick={selectOpen} className="flex items-center justify-between py-2 px-4 h-12">
                     <h1>Timeframe : {selectedTimeframe}</h1>
                     <div  >
@@ -23,7 +23,7 @@ const TimeframeFilter = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className="absolute z-50 bg-white w-11/12 left-5 rounded-b-3xl drop-shadow-sm top-9">
                     <ul className={`${arrowUP ? '' : 'hidden'} pb-5`}>
                         {timeframeOptions.map((option) => (
                             <li

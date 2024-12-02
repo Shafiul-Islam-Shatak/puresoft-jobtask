@@ -2,7 +2,7 @@ import React from "react";
 
 const GradientProgressBar = ({ value }: { value: number }) => {
   return (
-    <div className="relative w-[310px] h-4 bg-pink-100 rounded-lg overflow-hidden">
+    <div className="relative w-52 lg:w-[310px] md:w-80 h-4 bg-pink-100 rounded-lg overflow-hidden">
       <div
         className="absolute top-0 left-0 h-full"
         style={{

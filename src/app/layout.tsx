@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme='light'>
       <body
         className={`${inter.className} antialiased bg-[#F9F9F9]`}
       ><QueryProvider>{children}</QueryProvider>

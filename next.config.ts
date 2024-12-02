@@ -17,6 +17,9 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true, 
     contentDispositionType: "inline",
   },
+  api: {
+    bodyParser: true,  // Ensures the body is parsed as JSON
+  },
 };
 
 export default nextConfig;
