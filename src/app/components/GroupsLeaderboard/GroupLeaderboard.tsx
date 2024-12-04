@@ -8,6 +8,9 @@ interface Group {
   points: number;
   accuracy_percentage: number;
   previous_accuracy_percentage: number;
+  group_name :string,
+  points_per_user:number
+
 }
 
 interface GroupLeaderboardProps {
@@ -22,8 +25,8 @@ const GroupLeaderboard: React.FC<GroupLeaderboardProps> = ({ data }) => {
         <GroupLeaderboardCard
           key={idx}
           item={{
-            group_name: item.name,
-            points_per_user: item.points,
+            group_name: item.group_name,
+            points_per_user: item.points_per_user,
             accuracy_percentage: item.accuracy_percentage,
             previous_accuracy_percentage: item.previous_accuracy_percentage,
           }}

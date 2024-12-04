@@ -19,6 +19,7 @@ const GroupLeaderboardCard: React.FC<GroupLeaderboardCardProps> = ({ item, idx }
 
     const userImprove = item.accuracy_percentage > item.previous_accuracy_percentage;
 
+console.log(item);
 
     return (
         <div className="flex justify-between items-center">

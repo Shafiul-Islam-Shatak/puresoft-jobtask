@@ -28,7 +28,7 @@ const DashboardPage = () => {
     })
 
     if (isLoading) {
-        return <div className='w-screen h-screen mx-auto'> <GridLoader color="#918484" />
+        return <div className='h-screen flex justify-center items-center '> <GridLoader color="#918484" />
         </div>
     }
 
