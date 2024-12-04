@@ -1,8 +1,17 @@
 import { CiCircleInfo } from "react-icons/ci";
 
 interface MetricsProps {
-  data: any;
-}
+    data: {
+      active_users: {
+        current: number;
+        total: number;
+      };
+      questions_answered: number;
+      average_session_length_seconds: number;
+      starting_knowledge_percentage: number;
+      current_knowledge_percentage: number;
+    };
+  }
 const Metrics : React.FC<MetricsProps> = ({ data }) => {
 
     const answeredQuestions = new Intl.NumberFormat('en-US').format(data?.questions_answered)

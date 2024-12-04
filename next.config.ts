@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  reactStrictMode: true,
   images: {
     remotePatterns: [
       {
@@ -16,10 +17,8 @@ const nextConfig: NextConfig = {
     ],
     dangerouslyAllowSVG: true, 
     contentDispositionType: "inline",
-  },
-  api: {
-    bodyParser: true,  // Ensures the body is parsed as JSON
-  },
+  }
+
 };
 
 export default nextConfig;

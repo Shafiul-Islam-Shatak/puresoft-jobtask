@@ -38,14 +38,7 @@ const Activity: React.FC<ActivityProps> = ({ data }) => {
           tickLine={false} />
           <Tooltip />
           
-          <Bar 
-           shape={(props: any) => (
-            <rect
-              {...props}
-              rx={10}  
-              ry={10}  
-            />
-          )}
+          <Bar
            dataKey="value" fill="#1B59F8CC" background={{ fill: '#F2F7FF'} } />
         </BarChart>
       </ResponsiveContainer>

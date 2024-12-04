@@ -4,8 +4,12 @@ import Image from "next/image"
 import StongestProgressBar from "./StongestProgressBar";
 
 interface StrongestTopicsCardProps {
-    item: any
-}
+    item: {
+      name: string;
+      image: string;
+      correct_percentage: number;
+    };
+  }
 
 const StrongestTopicsCard: React.FC<StrongestTopicsCardProps> = ({ item }) => {
 

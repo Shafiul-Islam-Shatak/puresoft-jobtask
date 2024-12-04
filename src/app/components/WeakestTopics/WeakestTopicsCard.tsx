@@ -4,8 +4,12 @@ import Image from "next/image"
 import GradientProgressBar from "./GradientProgressBar"
 
 interface WeakestTopicsCardProps {
-    item: any
-}
+    item: {
+      name: string;
+      image: string;
+      correct_percentage: number;
+    };
+  }
 
 const WeakestTopicsCard: React.FC<WeakestTopicsCardProps> = ({ item }) => {
 

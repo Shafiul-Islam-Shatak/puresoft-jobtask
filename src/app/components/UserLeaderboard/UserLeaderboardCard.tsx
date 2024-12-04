@@ -3,7 +3,6 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMdArrowDropup } from "react-icons/io";
 
 import Image from "next/image"
-import { useState } from "react";
 
 interface UserLeaderboardCardProps {
     item: {

@@ -3,11 +3,18 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMdArrowDropup } from "react-icons/io";
 
 
-interface GroupLeaderboardCardProps {
-    item: any,
-    idx: number
-}
-
+interface GroupLeaderboardCardItem {
+    group_name: string;
+    points_per_user: number;
+    accuracy_percentage: number;
+    previous_accuracy_percentage: number;
+  }
+  
+  interface GroupLeaderboardCardProps {
+    item: GroupLeaderboardCardItem; 
+    idx: number;
+  }
+  
 const GroupLeaderboardCard: React.FC<GroupLeaderboardCardProps> = ({ item, idx }) => {
 
     const userImprove = item.accuracy_percentage > item.previous_accuracy_percentage;
